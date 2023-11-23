@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">  
+    <script src="https://kit.fontawesome.com/259c9dfacd.js" crossorigin="anonymous"></script>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-angle-up"></i></button>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a onclick="closemenu()" href="#header" class="active-link">Home</a></li>
+                    <li><a onclick="closemenu()" href="#about">About</a></li>
+                    <li><a onclick="closemenu()" href="#services">Services</a></li>
+                    <li><a onclick="closemenu()" href="#portfolio">Portfolio</a></li>
+                    <li><a onclick="closemenu()" href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi,<br>I'm <span>Adarsh.</span><br></h1>
+                <p><span class="auto-typed"></span></p>
+            </div> 
+        </div>
+    </div>
+    <!--------------about---------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="profile-pic">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hey everyone! I'm an Engineering Undergrad, navigating the fascinating realm of technology. Beyond my academic pursuits, I'm an avid programmer who thrives on cracking complex challenges across different platforms.
+                        <br> <p class="cont">But that's not all-I've got a creative side too. I'm passionate about web development, and I've honed my skills in crafting captivating and functional websites. From breathing life into design concepts to coding interactive user experiences, I find immense satisfaction in bringing ideas to life in the digital world.</p>
+                    </p>
+
+                    <div class="tab-tiles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                        <p class="tab-links" onclick="opentab('profile')">Coding Profile</p>
+                        <!-- <p class="tab-links" onclick="opentab('experience')">Experience</p> -->
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span>
+                                <p>Java, C, C++, HTML, CSS, Javascript, SQL</p>
+                                </li>
+                            <li><span>Framework</span>
+                                <p>Bootstrap, jQuery, Api</p></li>
+                            <li><span>Version Control</span><p>Git, GitHub</p></li>
+                        </ul>
+                    </div>
+                    <!--
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute</li>
+                            <li><span>2019 - 2021</span><br>Team lead at StarApp LLC.</li>
+                            <li><span>2017 - 2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+                            <li><span>2016 - 2017</span><br>Internship at ekart eCommerce.</li>
+                        </ul>
+                    </div>
+                    -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - 2025</span><p>B.Tech(Lateral) - IT <br>Institute of Enginnering and Management, Kolkata.
+                            </p></li>
+                            <li><span>2018 - 2021</span><p>Diploma - Electronics Engg.<br>Government Polytechnic Patna.</p></li>
+                            <li><span>2018</span><p>Secondary<br>Kendriya Vidyalaya Saharsa.</p></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="achievements">
+                        <ul>
+                            <li><span>Global Rank : 47</span><br>CodeRush October '23</li>
+                            <li><span>Global Rank : 169</span><br>GFG Weekly Coding Contest - 113</li>
+                            <li><span>Global Rank : 789</span><br>Codechef Starters 95 Division 3</li>
+                            <li><span>Global Rank : 375</span><br>Codechef Starters 89 Division 4.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="profile">
+                        <ul>
+                            <li><span>Leetcode</span><br> Rating : 1669</li>
+                            <li><span>Codeforces</span><br> Rating : 1254</li>
+                            <li><span>Codechef</span><br> Rating : 1605</li>
+                            <li><span>Newton School</span><br>Rating : 1927</li>
+                        </ul>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------services----------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <h2 class="hire" >"Ready to Enhance Your Online Presence" <br> <span id="hire">Leave the hard work to me!</span></h2>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend</h2>
+                    <p>Whether you're looking to revamp your existing website, build a new web application from scratch, or optimize frontend performance, I'm here to transform your ideas into captivating digital realities.</p>
+                    <a href="#portfolio">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Web Design</h2>
+                    <p>Step into the realm of exceptional web design through our Service tab, where pixels and creativity merge to build captivating online experiences.</p>
+                    <a href="#portfolio">Learn more</a>
+                </div>
+                <!-- <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, error voluptatum. Tempore veritatis eum nihil, hic quibusdam dolores nobis reiciendis, sapiente, nemo et ipsa enim accusamus iusto unde est incidunt?</p>
+                    <a href="#">Learn more</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!---------portfolio--------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="work-sample">
+                    <div class="layer">
+                        <h3>3D Flip Card</h3>
+                        <p>Stunning 3D flip effect that catches the user's attention.
+                        </p>
+                        <a href="https://jinx-vi-0.github.io/Flip-Card/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="work-sample">
+                    <div class="layer">
+                        <h3>QuoteQuest</h3>
+                        <p>Inspires you with an endless supply of famous quotes.
+                        </p>
+                        <a href="https://jinx-vi-0.github.io/QuoteQuest/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="work-sample">
+                    <div class="layer">
+                        <h3>Sorting Visualizer</h3>
+                        <p>Enhances comprehension of sorting algorithms through interactive visualizations.
+                        </p>
+                        <a href="https://jinx-vi-0.github.io/Sorting-Visualizer/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="comingsoon.html" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!------------contact---------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><a href="mailto:adarshkumarmsay@gmail.com"><i class="fa-solid fa-envelope"></i></a>adarshkumarmsay@gmail.com</p>
+                    <p><a href="http://wa.me/919771831841?text=Hi.!" target="_blank"><i class="fa-solid fa-phone"></i></a>9771831841</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/jinx-vi/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/jinx-vi-0" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://twitter.com/_jinx_vi_" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://t.me/jinx_vi_0" target="_blank"><i class="fa-solid fa-paper-plane"></i></a>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1gena5wGPtNlfhJMcRaGc77bh6-cut5d7/view?usp=sharing" target="_blank" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © jinx_vi. Made with <i class="fa-solid fa-heart"></i> by Adarsh</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
